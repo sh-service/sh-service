@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>404 Page not found</title>
+<title>400 Bad Request</title>
 </head>
 <body>
-<h2 align="center"><small>Small-Http<br />404 Page not found</small></h2>
+<h2 align="center"><small>400 Bad Request</small></h2>
 </body>
 </html>

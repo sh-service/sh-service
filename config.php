@@ -1,19 +1,53 @@
 <?php
+#############################################
+	 # DO NOT REMOVE ANYTHONG HERE #
+#############################################
 define("SH_KEY","API");
 define("SH_VALUE","SH");
+define("REMOTE_TOKEN","Tok");
+$SH_AUTH = [
+			"HEAD"=>[
+						"API"=>"SH"
+					],
+			"AUTH"=>[
+					"access_token"=>"shservice"
+					]
+		   ];
+
+$_GLOBALS['SH_AUTH'] = $SH_AUTH;
+
+define("BASE_URL", "http://localhost/sh-service/");
+
+define("_400_", "./400.php"); # Bad Request
 
 /* CONTROLLER */
 #=================================#
-define("CONTROLLER_PATH","controller/");
-define("MODEL_PATH","model/");
-define("HTML_PATH","html/");
-define("LIBRARY_PATH","library/");
-define("EXT_PATH","extender/");
-#=================================#
+define("CONTROLLER_PATH","app/controller/");
+define("MODEL_PATH","app/model/");
+define("HTML_PATH","app/html/");
+define("LIBRARY_PATH","app/library/");
+define("LANG_PATH","app/language/");
+define("EXT_PATH","app/extender/");
+define("CMS_PATH","app/cms/");
+
+#===============DONT EDIR==================#
+define("APPPATH",__DIR__); 				 # __DIR__     
+define("ENVIRONMENT","DEVELOPMENT");			 # DEVELOPMENT
+define("BASEPATH","sys/");				 # APPPATH."/" Ex: dbc/
+#================DONT EDIT=================#
+
 /* DATABASE */
 define("HOST","localhost");
 define("USERNAME","root");
-define("PASSWORD","root");
-define("DATABASE","3p-php");
-define("DATABASE_TYPE","mysql");
-define("DB_STATUS",true);    # ON | OFF = 1 | 0
+define("PASSWORD","");
+define("DATABASE","shservice");
+define("DATABASE_TYPE","mysqli");
+define("DB_STATUS",false); #
+
+# ADDITIONAL OPTIONS
+define("DNS","");
+define("DATABASE_PREFIX","");
+ini_set('session.save_path',realpath(dirname($_SERVER['DOCUMENT_ROOT']) . '/../session'));
+#############################################
+	 # DO NOT REMOVE ANYTHONG HERE #
+#############################################
